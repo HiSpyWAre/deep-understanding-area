@@ -1,0 +1,11 @@
+
+naya dongs 
+6
+python -u "d:\Documents\explore IT\projectchallenge\projectLadder\numberGuessGame\number_guesser.py" 
+2
+naya 
+7
+aku 
+9
+aqila 
+7
