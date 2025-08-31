@@ -1,0 +1,8 @@
+print("WELCOME TO TO-DO LIST APP")
+print("1. Enter activity")
+print("2. Remove activity")
+print("3. View all activity")
+print("4. Search activity")
+print("5. Undo activity")
+print("6. Redo activity")
+print("7. Mark as done an activity")
