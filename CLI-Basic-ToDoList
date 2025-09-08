@@ -1,8 +1,123 @@
-print("WELCOME TO TO-DO LIST APP")
-print("1. Enter activity")
-print("2. Remove activity")
-print("3. View all activity")
-print("4. Search activity")
-print("5. Undo activity")
-print("6. Redo activity")
-print("7. Mark as done an activity")
+from datetime import datetime
+# skrg = datetime.now()
+
+# global variabel 
+all_task = [] # semua tersimpan dlm list ini
+categories = ["Do", "Schedule", "Delegate", "Delete"] 
+
+
+def add_act():
+    act = input("Enter the to-do task: ")
+    # Prompt ini jelas memberitahu user format yang benar
+    date_str = input("Enter the deadline (YYYY-MM-DD HH:MM): ")
+    
+    chosen = ""
+    while True:
+        prompt = f"Choose a category (1: {categories[0]}, 2: {categories[1]}, 3: {categories[2]}, 4: {categories[3]}): "
+        choose_category = input(prompt)
+        # Validasi yang lebih aman
+        if choose_category.isdigit() and 1 <= int(choose_category) <= 4:
+            chosen = categories[int(choose_category) - 1]
+            break
+        else:
+            print("❌ Invalid!! Please enter a number from 1 to 4.")
+
+    try:
+        # Pastikan format ini (%H:%M) sesuai dengan prompt di atas
+        format_deadline = datetime.strptime(date_str, "%Y-%m-%d %H:%M")
+        
+        user_task = {
+            "task": act,
+            "deadline": format_deadline,
+            "category": chosen,
+            "completed": False  # Menggunakan titik dua (:) yang benar
+        }
+
+        all_task.append(user_task)
+        print("\n✅ Task added successfully!")
+
+    except ValueError:
+        # Menangkap error jika format tanggal/waktu tetap salah
+        print("\n❌ Invalid date format. Task was not added.")
+
+def remove_act():
+    view_all()
+
+    if not all_task:
+        print("There're no tasks to remove.") # Exit if there are no tasks to remove
+
+    try:
+        delete = int(input("Enter the number of the task to remove = "))
+        if 1 <= delete <= len(all_task):
+            # Convert user's number (1-based) to list index (0-based)
+            removed_task = all_task.pop(delete - 1)
+            print(f"\n✅ Successfully removed task: '{removed_task['task']}'")
+        else:
+            print("❌ Invalid number. No task with that number exists.")
+    except ValueError:
+        print("❌Invalid input! Enter a number instead!")
+
+
+def view_all():
+    try:
+        for i, component in enumerate(all_task, start = 1):
+            # using dictionary keys
+            task= component['task']
+            deadline = component['deadline']
+            category = component['category']
+            status = "Done" if component['completed'] else "Not Done"
+
+            deadline_formatted = deadline.strftime("%A, %b %d, %Y at %I:%M %p")
+
+            print(f"TODAY'S HIGHTLIGHT !!!")
+            print(f"{i} - {task} - MUST TO FINISH BEFORE {deadline_formatted} NOTE : {category} - status {status}")
+    except:
+        print("Task doesn't exist")
+
+def search_element():
+    element = input("Search a task = ").lower()
+    found = [task for task in all_task if element in task['task'].lower()]
+    if not found:
+        print("No tasks found matching your criteria.")
+    else:
+        print("\n--- Found Tasks ---")
+        for i, task in enumerate(found, start=1):
+            status = "Done" if task['completed'] else "Not Done"
+            deadline_formatted = task['deadline'].strftime("%A, %b %d, %Y at %I:%M %p")
+            print(f"{i}. Task: {task['task']}")
+            print(f"   Category: {task['category']}")
+            print(f"   Deadline: {deadline_formatted}")
+            print(f"   Status: {status}\n")
+
+
+
+
+def main():
+    while True:
+        print("===== WELCOME TO TO-DO LIST APP ====")
+        # print(f"REMEMBER TODAY IS : {datetime.datetime.now().strftime('%A, %B %d, %Y')}")
+        print("1. Enter Task")
+        print("2. Remove Task")
+        print("3. View all Task")
+        print("4. Search Task (by name)")
+        print("5. Exit")
+        
+        user = input("Ready to scale-up your productivity? (choose 1-7)")
+
+        if user == '1':
+            add_act()
+        elif user == '2':
+            remove_act()
+        elif user == '3':
+            view_all()
+        elif user == '4':
+            search_element()
+        elif user == '5':
+            print("THANK YOU FOR USING THIS PROGRAM")
+            break
+
+
+
+
+
+main()
