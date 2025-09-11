@@ -1,0 +1,13 @@
+-- Only need to run once
+CREATE DATABASE ANIMAL;
+
+CREATE TABLE ANIMAL.CUTE
+(
+	ID INT,
+    FIRSNAME varchar (10)
+);
+
+INSERT INTO ANIMAL.CUTE (id, FIRSNAME) values (1, 'cat');
+INSERT INTO ANIMAL.CUTE (id, FIRSNAME) values (2, 'butterfly');
+    
+SELECT * FROM ANIMAL.CUTE
