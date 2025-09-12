@@ -105,6 +105,21 @@ public class studentDatabase {
                         System.out.println("GPA not found! Try again or Add data!");
                     }
                     break;
+
+                    case 4:
+                    System.out.println("== Class Statistics ==");
+                    System.out.println("Enter your ID = ");
+                    int statistic = sc.nextInt();
+                    sc.nextLine();
+                    // show total student number
+                    System.out.println("Total number = " + allStudent.size());
+                    // gpa specific statistic
+                     for (Students e : allStudent) {
+                        e.ID + =  
+                        if (e.ID == search_id) {
+                            System.out.println("ID: " + e.ID + " | Name: " + e.Name + " | Major: " + e.Major + " | GPA: " + e.GPA);
+
+                    
             }
 
         }
