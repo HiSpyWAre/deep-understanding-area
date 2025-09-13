@@ -52,14 +52,6 @@ public class studentDatabase {
 
                     data.putIfAbsent(name, new ArrayList<>());
                     data.get(name).add(student);
-
-                    // if (data.containsKey(name)) {
-                    //     data.get(name).add(student);
-                    // } else {
-                    //     List<Students> newList = new ArrayList<>();
-                    //     newList.add(student);
-                    //     data.put(name, newList);
-                    // }
                     break;
 
                 case 2: // update GPA
@@ -106,18 +98,81 @@ public class studentDatabase {
                     }
                     break;
 
-                    case 4:
+                case 4:
                     System.out.println("== Class Statistics ==");
-                    System.out.println("Enter your ID = ");
-                    int statistic = sc.nextInt();
-                    sc.nextLine();
                     // show total student number
-                    System.out.println("Total number = " + allStudent.size());
+                    System.out.println("Total Students Enrolled  = " + allStudent.size());
+
                     // gpa specific statistic
-                     for (Students e : allStudent) {
-                        e.ID + =  
-                        if (e.ID == search_id) {
-                            System.out.println("ID: " + e.ID + " | Name: " + e.Name + " | Major: " + e.Major + " | GPA: " + e.GPA);
+                    int count = 0;
+                    for (Students e : allStudent) {
+                        count += e.GPA;
+                        break;
+                    }
+
+                    float mean = count / allStudent.size();
+                    System.out.println("Average Class GPA: " + mean);
+
+                    float highestGPA = 0.0f;
+                    float lowestGPA = 4.0f;
+
+                    String maxGPA = "";
+                    String minGPA = "";
+                    
+                    Map<String, Integer> studentPerMajor = new HashMap<>();
+                    Map<String, Float> gpaPerMajor = new HashMap<>();
+
+                    for (Students e : allStudent) {
+                        mean += e.GPA;
+
+                        if (e.GPA > highestGPA) {
+                            highestGPA = e.GPA;
+                            maxGPA = e.Name;
+                        }
+
+                        if (e.GPA < lowestGPA) {
+                            lowestGPA = e.GPA;
+                            minGPA = e.Name;
+
+                        String currentMajor = e.Major;
+                        // getOrDefault is a safe way to get a value or a default (0) if it's not in the map yet.
+                        studentPerMajor.put(currentMajor, studentPerMajor.getOrDefault(currentMajor, 0) + 1);
+                        gpaPerMajor.put(currentMajor, gpaPerMajor.getOrDefault(currentMajor, 0.0f) + e.GPA);
+                        }
+                    }
+                    System.out.println("---- GPA Information ----");
+                    System.out.printf("The highest GPA : %.2f (Achieved by : %s)", highestGPA, maxGPA);
+                    System.out.printf("Lowest GPA:  %.2f (Achieved by: %s)\n", lowestGPA, minGPA);
+
+                    // major spesific statistic
+                    System.out.println("---- Major DIstribution ----");
+
+                    for (String majorName : studentPerMajor.keySet()) {
+                        int count2 = studentPerMajor.get(majorName);
+                        float gpaSum = gpaPerMajor.get(majorName);
+                        float majorAverageGpa = gpaSum / count2;
+                        System.out.printf("- %s: %d students (Avg. GPA: %.2f)\n", majorName, count, majorAverageGpa);
+                    }
+                    break;
+
+                case 5:
+                    try {
+                        FileWriter writer = new FileWriter("database.txt");
+                        writer.write("Saving updated data.");
+                        writer.close();
+                        System.out.println("Exiting program. Goodbye!");
+                    }
+
+                    catch (IOException a){
+                        System.out.println("An error has occuredd. try again!");
+                        a.printStackTrace();
+                    }
+                    sc.close();
+                    return;
+
+                default:
+                    System.out.println("Invalid choice. Please select a valid option.");
+                    break;
 
                     
             }
