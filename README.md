@@ -1,7 +1,9 @@
 # deep-understanding-area
 
 14/09/2025 == here's my schema to coding consistently everyday. It through "PROJECT LADDER" :
+
 **Project 1 : Calculator CLI**✅
+
 🛑 Learn variables, input/output, conditionals, loops.
 🛑 Do +, −, ×, ÷ with error handling (e.g., divide by zero).
 
