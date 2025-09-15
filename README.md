@@ -120,4 +120,7 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
    git clone https://github.com/yourusername/python-project-ladder.git
    cd python-project-ladder
 
+---
+## 🎆 REFERENCES
+1. https://drive.google.com/file/d/1uJmnLU3P4XtJOu2Ol745N8KE10omjDuq/view?usp=sharing
 
