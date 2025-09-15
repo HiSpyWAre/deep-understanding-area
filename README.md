@@ -11,32 +11,32 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 
 ## 📂 Project List
 
-### **Project 1: Calculator (CLI)**
+### **Project 1: Calculator (CLI)**✅
 - Learn variables, input/output, conditionals, loops.  
 - Support +, −, ×, ÷ with error handling (e.g., divide by zero).  
 
 ---
 
-### **Project 2: Number Guessing Game**
+### **Project 2: Number Guessing Game**✅
 - Use the `random` module for randomness.  
 - Practice loops, conditionals, and user input.  
 
 ---
 
-### **Project 3: Multiplication Table Generator**
+### **Project 3: Multiplication Table Generator**✅
 - Generate tables up to `n × 10`.  
 - Practice nested loops and output formatting.  
 
 ---
 
-### **Project 4: To-do List (CLI, basic)**
+### **Project 4: To-do List (CLI, basic)**✅
 - Store tasks in a **list**.  
 - Options: add, view, delete.  
 - Reinforces list operations and menu systems.  
 
 ---
 
-### **Project 5: Contact Book (Dictionary-based)**
+### **Project 5: Contact Book (Dictionary-based)**✅
 - Store name → phone number pairs in a dictionary.  
 - Search contacts by name.  
 - Reinforces dictionary usage.  
@@ -50,14 +50,14 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 
 ---
 
-### **Project 7: Math Toolkit**
+### **Project 7: Math Toolkit**✅
 - Functions for prime check, factorial, GCD/LCM.  
 - CLI menu to choose which function to run.  
 - Reinforces reusability and math logic.  
 
 ---
 
-### **Project 8: Student Class (OOP)**
+### **Project 8: Student Class (OOP)**✅
 - Class `Student` with attributes: `name`, `ID`, `GPA`.  
 - Methods: update GPA, display info.  
 - Teaches object-oriented concepts.  
