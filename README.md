@@ -71,7 +71,7 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 
 ---
 
-### **Project 10: Notes App (File Handling)**
+### **Project 10: Notes App (File Handling)**✅ (open to modification -> still chgpt based)
 - Write notes → saved to `notes.txt`.  
 - Option to read notes back later.  
 - Teaches file I/O.  
