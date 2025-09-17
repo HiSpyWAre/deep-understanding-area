@@ -1,13 +1,91 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <html lang = "en">
     <head>
         <tittle>
-            Try on again, again, and again
+            <!-- Try on again, again, and again -->
         </tittle>
+        <link rel = "stylesheet" href="index.css"/>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     </head>
+    <style>
+        .row > div {
+                padding: 20px;
+                background-color: teal;
+                border: 2px solid black;
+        }
+        .grid{
+            background-color:rgb(178, 190, 167);
+            display: grid;
+            padding:20 px;
+            grid-column-gap: 20 px;
+            grid-row-gap: 10 px;
+            grid-template-columns: 200px 200px auto;
+        }
+        .grid-item {
+            background-color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            }
+        button {
+            background-color:cornflowerblue;
+            width: 200px;
+            height: 50px;
+            font-size: 24px;     
+            font-family :monospace  
+        }
+
+        button:hover {
+            background-color: rgb(178, 190, 167);
+        }
+        @media (min-width: 600px) {
+            body {
+                background-color: rgb(171, 179, 154);
+                }
+            }
+
+        @media (max-width: 599px) {
+            body {
+                background-color: rgb(129, 198, 221);
+                }
+            }
+
+        #container {
+            display:flex;
+            flex-wrap:wrap;
+        }
+        #container > div {
+            background-color: rgb(93, 141, 93);
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            width: 200px;
+        }
+
+    </style>
     <body>
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    This is a section.
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    This is another section.
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    This is a third section.
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    This is a fourth section. -->
+        <button style= "text-align : center;">Button 1</button>
+        <button style= "text-align : center;">Button 2</button>
+        <button style= "text-align : center;">Button 3</button>
+
         <h1 style= "text-align : center;"> LEARNING TRACK </h1>
-        <h6 style= "text-align : center;"><strong> (created : 15-09-2025 22:38) </strong></h6>
+        <h6 style = "text-align : center;"><strong> (created : 15-09-2025 22:38) </strong></h6>
+
         <h3> <ul>  Study List </h3>
             <h4>
             <li> 1. Project Ladder python </li>
@@ -20,8 +98,10 @@
             </ul>
         </h4>
         <br>
-        <h3> this is my manifestation look like</h3>
-        <img src="D:\Documents\webdevpage\day01\test.jpg" alt="nayya want to going abroad">
+
+    <!-- give the inisialization of html part that want to be developed in the css, with "id" -->
+        <h3 id ="second-header"> this is my manifestation look like</h3>
+        <img type ="image" src="test.jpg" alt="nayya want to going abroad" width="450 px" height ="305">
 
         <br>
         <table>
