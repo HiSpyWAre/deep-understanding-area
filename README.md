@@ -78,7 +78,7 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 
 ---
 
-### **Project 11: Expense Tracker (File Handling + CSV)**
+### **Project 11: Expense Tracker (File Handling + CSV)**✅
 - Save expenses in CSV.  
 - Read back and calculate totals per category.  
 - Introduces structured file formats.  
