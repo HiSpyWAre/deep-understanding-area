@@ -85,14 +85,14 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 
 ---
 
-### **Project 12: Student Database (SQLite)**
+### **Project 12: Student Database (SQLite)**🪄(halfway-on-progress)
 - Add/search students in a database.  
 - Store name + GPA, query for top GPA.  
 - Teaches SQL + Python integration.  
 
 ---
 
-### **Project 13: To-do List (with Database)**
+### **Project 13: To-do List (with Database)** 🪄(halfway-on-progress)
 - Upgrade Project 4 with SQLite.  
 - CRUD: add, mark as done, delete.  
 - Bridges CLI → persistent apps.  
