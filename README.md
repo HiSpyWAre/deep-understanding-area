@@ -113,6 +113,14 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 - 🎉 First full-stack project complete!  
 
 ---
+### **ADDITIONAL**
+1. Interface Google Search Web
+   including :
+- main page, advance search page, and image search page
+- the user should be able to type in a query, click “Google Search”, and be taken to the Google search results for that page.
+- 
+
+2. 
 
 ## 🛠️ How to Use
 1. Clone the repo:  
@@ -123,4 +131,5 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 ---
 ## 🎆 REFERENCES
 1. https://drive.google.com/file/d/1uJmnLU3P4XtJOu2Ol745N8KE10omjDuq/view?usp=sharing
+2. https://cs50.harvard.edu/web/projects/0/search/
 
