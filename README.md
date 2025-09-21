@@ -85,7 +85,7 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 
 ---
 
-### **Project 12: Student Database (SQLite)**🪄(halfway-on-progress)
+### **Project 12: Student Database (My SQL)**✅ -> can scale-up again in term interface 
 - Add/search students in a database.  
 - Store name + GPA, query for top GPA.  
 - Teaches SQL + Python integration.  
