@@ -2,9 +2,9 @@
 
 14/09/2025 == here's my schema to coding consistently everyday. It through "PROJECT LADDER" :
 
-# 🚀 Python Project Ladder
+# 🚀 Project Ladder
 
-A progressive set of **15 beginner-to-intermediate Python projects**, designed to build up programming skills step by step.  
+A progressive set of **15 beginner-to-intermediate projects**, designed to build up programming skills step by step.  
 Each project introduces **new concepts** while reinforcing previous lessons, so by the end you’ll have your **first full-stack app**.  
 
 ---
