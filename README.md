@@ -114,13 +114,12 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 
 ---
 ### **ADDITIONAL**
-1. Interface Google Search Web
+0. Interface Google Search Web
    including :
 - main page, advance search page, and image search page
 - the user should be able to type in a query, click “Google Search”, and be taken to the Google search results for that page.
-- 
 
-2. 
+1. 
 
 ## 🛠️ How to Use
 1. Clone the repo:  
