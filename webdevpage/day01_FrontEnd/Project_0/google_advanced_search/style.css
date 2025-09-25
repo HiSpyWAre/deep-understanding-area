@@ -84,6 +84,13 @@ body {
     cursor: pointer;
 }
 
+.tittle-of-subclass{
+    display:flex;
+    /* margin-top:50px; */
+    padding:30px 30px;
+    font-size:18px;
+}
+
  .search-form {
             width: 600px;
             padding: 20px;
@@ -95,23 +102,39 @@ body {
             align-items: center;    /* Vertically center them */
             margin-bottom: 16px;    /* Space between each row */
         }
-
+        /* .line1 {
+        
+        } */
         /* --- Labels --- */
         .form-row label {
             width: 220px;       /* Fixed width to align all inputs vertically */
             flex-shrink: 0;     /* Prevents the label from shrinking */
-            padding-right: 15px;
-            text-align: right;  /* Aligns text to the right, closer to the input */
+            /* padding-right: 15px; */
+            /* text-align: ;  Aligns text to the right, closer to the input */
+            margin-right: 15px;
+            padding: 15px 30px;
         }
+
+        .font-a{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:15px;
+            padding-left: 10px;
+        }
+
+        .font-b{
+            font-family:'Courier New', Courier, monospace;
+            font-size:15px;
+        }
+
 
         /* --- Text Input Fields --- */
         input[type="text"] {
             background-color: #333333; /* Dark gray input background */
-            border: 1px solid #444444; /* Subtle border */
+            border: 1px solid #978f8f; /* Subtle border */
             color: #e0e0e0;           /* Light text color for typing */
             padding: 10px;
             border-radius: 4px;
-            width: 100%;              /* Make input fill the remaining space */
+            width: 50%;              /* Make input fill the remaining space */
             box-sizing: border-box;   /* Ensures padding doesn't affect the width */
         }
 
@@ -123,3 +146,106 @@ body {
         .range-row input {
             width: 100px; /* Give the smaller number inputs a fixed width */
         }
+
+        .second-subclass{
+            display:flex;
+            /* margin-top:50px; */
+            padding:30px 30px;
+            font-size:18px;
+        }
+
+        /* --- Main Container --- */
+.custom-select {
+  position: relative; /* This is crucial for positioning the options */
+  width: 250px;
+  font-family: sans-serif;
+  color: #e0e0e0;
+}
+
+/* --- The Trigger Button (the visible part) --- */
+.select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #202124; /* Dark background */
+  border: 1px solid #5f6368; /* Default border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+/* --- Main Container --- */
+.custom-select {
+  position: relative; /* Still needed for positioning the options list */
+  width: 800px;
+  font-family: sans-serif;
+  color: #e0e0e0;
+}
+
+/* --- The Trigger Button (the <summary> tag) --- */
+.select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #202124;
+  border: 1px solid #5f6368;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  /* Remove the default arrow/marker from the summary element */
+  list-style: none; 
+}
+
+/* Remove the default marker in Chrome/Safari */
+.select-trigger::-webkit-details-marker {
+  display: none;
+}
+
+/* Style the trigger when the <details> element is open */
+.custom-select[open] > .select-trigger {
+  border-color: #8ab4f8; /* Blue border when open */
+  border-radius: 4px 4px 0 0;
+}
+
+/* --- The Custom Dropdown Arrow --- */
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #e0e0e0;
+  transition: transform 0.2s ease; /* Animate the arrow rotation */
+}
+
+/* Rotate the arrow when the dropdown is open */
+.custom-select[open] .arrow {
+  transform: rotate(180deg);
+}
+
+/* --- The Options List --- */
+.options {
+  /* Position it absolutely to overlay other content */
+  position: absolute;
+  top: 100%; /* Position it right below the trigger */
+  left: 0;
+  right: 0;
+  background-color: #202124;
+  border: 1px solid #5f6368;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 10;
+  max-height: 1000px;
+  overflow-y: auto;
+}
+
+/* --- Individual Options --- */
+.option {
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #3c4043;
+}
