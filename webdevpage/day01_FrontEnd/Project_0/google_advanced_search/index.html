@@ -32,34 +32,81 @@
             Advanced Search
     </div>
 
-    <hr>
+    <hr class="line1"></hr>
 
     <div main-class ="main">
+        <div class = "tittle-of-subclass">
+            Find pages with...
+        </div>
         <form action="#" method="get"></form>
         <div class ="form-row">
-            <label for="all-words">all of the following words:</label>
+            <label for="all-words">all these words:</label>
             <input type="text" id="all-words" name="all-words">
+            <span class="font-a">Type the important words: </span>
+            <span class="font-b"> tri-colour rat terrier </span>
         </div>
-                   <div class="form-row">
-                <label for="exact-phrase">exact words or phrases like this:</label>
-                <input type="text" id="exact-phrase" name="exact-phrase">
+        <div class="form-row">
+            <label for="exact-phrase">this exact words or phrase:</label>
+            <input type="text" id="exact-phrase" name="exact-phrase">
+                <span class="font-a">Put exact words in quotes </span>
+                <span class="font-b"> "rat terrier" </span>
             </div>
 
             <div class="form-row">
-                <label for="one-of-words">one of the following words:</label>
+                <label for="one-of-words">any of these words:</label>
                 <input type="text" id="one-of-words" name="one-of-words">
+                <span class="font-a">Type OR between all the words you want:  </span>
+                <span class="font-b"> "miniature OR standard" </span>
             </div>
 
             <div class="form-row">
-                <label for="none-of-words">none of the following words:</label>
+                <label for="none-of-words">none of these words:</label>
                 <input type="text" id="none-of-words" name="none-of-words">
+                <span class="font-a">Put a minus sign just before words that you don't want:</span>
+                <span class="font-b"> -rodent, -"Jack Russell" </span>
             </div>
 
             <div class="form-row range-row">
-                <label for="range-start">numbers with starting range:</label>
+                <label for="range-start">numbers ranging from:</label>
                 <input type="text" id="range-start" name="range-start">
-                <span>until</span>
+                <span>to</span>
                 <input type="text" id="range-end" name="range-end">
+                <span class="font-a">Put two full stops between the numbers and add a unit of measurement:</span>
+                <span class="font-b"> 10..35 kg, £300..£500, 2010..2011</span>
+            </div>
+
+            <hr>
+            <div class="second-subclass">
+                Then narrow your result by...
+            </div>
+ 
+            <div class ="form-row">
+                <label for="lang">Language:</label>
+                <!-- <input type="text" id="all-words" name="all-words"> -->
+                <!-- <span class="font-a"> Search for pages in the language you choose. </span> -->
+                 <details class="custom-select">
+
+                <summary class="select-trigger">
+                    <span>any language</span>
+                    <div class="arrow"></div>
+                </summary>
+
+                <div class="options">
+                    <div class="option">any language</div>
+                    <div class="option">Afrikaans</div>
+                    <div class="option">Arab</div>
+                    <div class="option">Armenia</div>
+                    <div class="option">Dutch</div>
+                    <div class="option">Belarus</div>
+                </div>
+                </details>
+                <span class="font-a">Search for pages in the language you choose.</span>
+            </div> 
+            <div class ="form-row">
+                <label for="lang">area:</label>
+                <input type="text" id="all-words" name="all-words">
+                <span class="font-a"> Search for pages published in a specific region.</span>
             </div>
         </form>
+
     </div>
