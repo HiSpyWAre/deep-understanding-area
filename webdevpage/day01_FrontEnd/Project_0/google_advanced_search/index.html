@@ -1,207 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <!-- responsive design = readable in all devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="style.css">
-    <title>Google</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+
+    <title>Advance Search Project 0</title>
 </head>
 <body>
-    <div class="header">
-        <div class = "tulisan-google">
-            Google
+    <header class="header">
+        <a href="https://www.google.com" class="header-logo">Google</a>
+        
+        <div class="header-right">
+            <div class="icon-button">
+                <svg focusable="false" viewBox="0 0 24 24">
+                    <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
+                </svg>
+            </div>
+            <div class="profile-avatar">
+                <span>N</span>
+            </div>
         </div>
-        <button class="apps-menu">
-            <div class="apps-grid">
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-                <div class="apps-dot"></div>
-            </div>
-        </button>
-        <div class="profile-pic">N</div>
-    </div>
+        
+    </header>
 
-    <div class="header-tittle">
-            Advanced Search
-    </div>
+    <div class="main-container">
+        <h1>Advanced Search</h1>
+        <hr>
+        
+        <form action="https://www.google.com/search" method="GET">
+            <div class="form-grid">
 
-    <hr class="line1"></hr>
-
-    <div main-class ="main">
-        <div class = "tittle-of-subclass">
-            Find pages with...
-        </div>
-        <form action="#" method="get"></form>
-        <div class ="form-row">
-            <label for="all-words">all these words:</label>
-            <input type="text" id="all-words" name="all-words">
-            <span class="font-a">Type the important words: </span>
-            <span class="font-b"> tri-colour rat terrier </span>
-        </div>
-        <div class="form-row">
-            <label for="exact-phrase">this exact words or phrase:</label>
-            <input type="text" id="exact-phrase" name="exact-phrase">
-                <span class="font-a">Put exact words in quotes </span>
-                <span class="font-b"> "rat terrier" </span>
-            </div>
-
-            <div class="form-row">
-                <label for="one-of-words">any of these words:</label>
-                <input type="text" id="one-of-words" name="one-of-words">
-                <span class="font-a">Type OR between all the words you want:  </span>
-                <span class="font-b"> "miniature OR standard" </span>
-            </div>
-
-            <div class="form-row">
-                <label for="none-of-words">none of these words:</label>
-                <input type="text" id="none-of-words" name="none-of-words">
-                <span class="font-a">Put a minus sign just before words that you don't want:</span>
-                <span class="font-b"> -rodent, -"Jack Russell" </span>
-            </div>
-
-            <div class="form-row range-row">
-                <label for="range-start">numbers ranging from:</label>
-                <input type="text" id="range-start" name="range-start">
-                <span>to</span>
-                <input type="text" id="range-end" name="range-end">
-                <span class="font-a">Put two full stops between the numbers and add a unit of measurement:</span>
-                <span class="font-b"> 10..35 kg, £300..£500, 2010..2011</span>
-            </div>
-
-            <hr>
-            <div class="second-subclass">
-                Then narrow your result by...
-            </div>
- 
-            <div class ="form-row">
-                <label for="lang">Language:</label>
-                <!-- <input type="text" id="all-words" name="all-words"> -->
-                <!-- <span class="font-a"> Search for pages in the language you choose. </span> -->
-                 <details class="custom-select">
-
-                <summary class="select-trigger">
-                    <span>any language</span>
-                    <div class="arrow"></div>
-                </summary>
-
-                <div class="options">
-                    <div class="option">any language</div>
-                    <div class="option">Afrikaans</div>
-                    <div class="option">Arab</div>
-                    <div class="option">Armenia</div>
-                    <div class="option">Dutch</div>
-                    <div class="option">Belarus</div>
+                <div class="section-title"></div>
+                
+                <div class="form-label">
+                    <label for="as_q">Find pages with:</label>
                 </div>
-                </details>
-                <span class="font-a">Search for pages in the language you choose.</span>
-            </div> 
-            <div class ="form-row">
-                <label for="lang">area:</label>
-                <input type="text" id="all-words" name="all-words">
-                <span class="font-a"> Search for pages published in a specific region.</span>
-            </div>
-
-            <div class ="form-row">
-                <label for="lang">last updated:</label>
-                 <details class="custom-select">
-
-                <summary class="select-trigger">
-                    <span>anytime</span>
-                    <div class="arrow"></div>
-                </summary>
-
-                <div class="options">
-                    <div class="option">anytime</div>
-                    <div class="option">Last 24 hours</div>
-                    <div class="option">Last week</div>
-                    <div class="option">Last 1 month</div>
-                    <div class="option">Last 1 year</div>
+                <div class="form-input">
+                    <input type="text" id="as_q" name="as_q">
                 </div>
-                </details>
-            </form>
-        </div>
-                 <div class ="form-row">
-                    <label for="lang">site or domain:</label>
-                    <input type="text" id="all-words" name="all-words">
-                    <span class="font-a"> Search a single site (for example, wikipedia.org ) or limit your results to specific domains such as .edu , .org , or .gov <span>
+                <div class="form-description">
+                   Type the important words: <span style="font-family: monospace;">tri-colour rat terrier </span>
                 </div>
 
-                    <div class ="form-row">
-                <label for="lang">terms that appear</label>
-                 <details class="custom-select">
-
-                <summary class="select-trigger">
-                    <span>in the page tittle</span>
-                    <div class="arrow"></div>
-                </summary>
-
-                <div class="options">
-                    <div class="option">anywhere on the page</div>
-                    <div class="option">in the page title</div>
-                    <div class="option">in the page text</div>
-                    <div class="option">in the page URL</div>
-                    <div class="option">in the page link to the page</div>
+                <div class="form-label">
+                    <label for="as_epq">this exact words or phrase:</label>
                 </div>
-                </details>
-            </form>
-            <span class="font-a"> Search for terms across pages, page titles, web addresses, or links to the pages you're looking for.<span></span>
-        </div>
-
-                     <div class ="form-row">
-                <label for="lang">file type </label>
-                 <details class="custom-select">
-
-                <summary class="select-trigger">
-                    <span>any format</span>
-                    <div class="arrow"></div>
-                </summary>
-
-                <div class="options">
-                    <div class="option">any format</div>
-                    <div class="option">Adobe Acrobat PDF (.pdf)</div>
-                    <div class="option">Adobe PostScript (.ps)</div>
-                    <div class="option">Autodesk DWF (.dwf)</div>
-                    <div class="option">Google Earth KML (.kml)</div>
-                    <div class="option">Google Earth KMZ (.kmz)</div>
-                    <div class="option">Microsoft Excel (.xls)</div>
-                    <div class="option">Microsoft Power Point (.ppt)</div>
-                    <div class="option">Microsoft word (.doc)</div>
-                    <div class="option">Rich Text Format (.rtf)</div>
-                    <div class="option">Shockwave Flash (.swf)</div>
+                <div class="form-input">
+                    <input type="text" id="as_epq" name="as_epq">
                 </div>
-                </details>
-            </form>
-            <span class="font-a"> Search for pages in the format you want</span>
-        </div>       
-
-            <div class ="form-row">
-                <label for="lang">usage right </label>
-                 <details class="custom-select">
-
-                <summary class="select-trigger">
-                    <span>unfiltered by license</span>
-                    <div class="arrow"></div>
-                </summary>
-
-                <div class="options">
-                    <div class="option">unfiltered by license</div>
-                    <div class="option">free to use or share</div>
-                    <div class="option">free to use or share, even comercially</div>
-                    <div class="option">free to use, share, or modify</div>
-                    <div class="option">free to use, share, or modify, even comercially</div>
+                <div class="form-description">
+                    Put exact words in quotes <span style="font-family: monospace;">"rat terrier"</span>
                 </div>
-                </details>
-            </form>
-            <span class="font-a"> Find the page that you are free to use</span>
-        </div>       
 
-        <div class = "submit-button">
-        <button type = "submit"> Advanced Search </button>
-        </div>
+                <div class="form-label">
+                    <label for="as_oq">any of these words</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="as_oq" name="as_oq">
+                </div>
+                <div class="form-description">
+                   Type OR between all the words you want:<span style="font-family: monospace;">"miniature OR standard"</span>
+                </div>
+
+                <div class="form-label">
+                    <label for="as_eq">none of these wprds: </label>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="as_eq" name="as eq">
+                </div>
+                <div class="form-description">
+                   Put a minus sign just before words that you don't want:<span style="font-family: monospace;">-rodent, -"Jack Russell"   </span>
+                </div>
+
+                <div class="form-label">
+                    <label for="as_nlo">numbers ranging form: </label>
+                </div>
+                <div class="form-input range-container">
+                    <input type="text" id="as_nlo" name="as_nlo">
+                      <span>until</span>
+                    <input type="text" id="as_nhi" name="as_nhi">
+                </div>
+
+                <div class="form-description">
+                    Put two full stops between the numbers and add a unit of measurement:<span style="font-family: monospace;"></span>
+                </div>
+            
+                
+            <div class = "second-container">
+                <hr >
+                <div class ="container-desc">
+                    Then narrow your result by...
+                </div>
+
+
+            </div>
