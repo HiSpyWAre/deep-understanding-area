@@ -1,263 +1,210 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: arial, sans-serif;
-    background-color: #060505;
-    color: #cfd6dc;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header */
-.header {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* .header a {
-    color: #eef4f9;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.header a:hover {
-    text-decoration: underline;
-} */
-
-.tulisan-google {
-    align-items: left;
-    font-size:20px;
-    margin-left: 20px;
-}
-
-.header-tittle {
-    align-items: left;
-    color:rgb(227, 127, 127);
-    font-size:larger;
-    padding: 15px 50px;
-}
-
-.apps-menu {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.apps-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    width: 16px;
-    height: 16px;
-}
-
-.apps-dot {
-    width: 4px;
-    height: 4px;
-    background-color: #e8edf4;
-    border-radius: 50%;
-}
-
-.profile-pic {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #4285f4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.tittle-of-subclass{
-    display:flex;
-    /* margin-top:50px; */
-    padding:30px 30px;
-    font-size:18px;
-}
-
- .search-form {
-            width: 600px;
-            padding: 20px;
+ :root {
+            --google-bg: #0b0b0b;
+            --google-text: hsl(216, 15%, 94%);
+            --google-text-secondary: #bdc1c6;
+            --google-input-bg: #202124;
+            --google-border: #5f6368;
+            --google-border-focus: #8ab4f8;
+            --google-blue: #8ab4f8;
+            --google-button-text: #202124;
+            --google-footer-bg: #171717;
+            --google-separator: #3c4043;
+            --google-icon-hover-bg: rgba(232, 234, 237, 0.08);
         }
 
-        /* --- Each Form Row --- */
-        .form-row {
-            display: flex;          /* Align label and input side-by-side */
-            align-items: center;    /* Vertically center them */
-            margin-bottom: 16px;    /* Space between each row */
+        /* --- Reset & Gaya Dasar --- */
+        body {
+            background-color: var(--google-bg);
+            color: var(--google-text);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            /* Menambahkan ruang di bawah agar footer tidak menimpa konten */
+            padding-bottom: 100px; 
         }
-        /* .line1 {
         
-        } */
-        /* --- Labels --- */
-        .form-row label {
-            width: 220px;       /* Fixed width to align all inputs vertically */
-            flex-shrink: 0;     /* Prevents the label from shrinking */
-            /* padding-right: 15px; */
-            /* text-align: ;  Aligns text to the right, closer to the input */
-            margin-right: 15px;
-            padding: 15px 30px;
+        /* --- Header --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
         }
-
-        .font-a{
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:15px;
+        .header-logo {
+            color: #f2ecec;
+            font-size: 22px;
+            font-weight: normal;
+            text-decoration: none;
             padding-left: 10px;
         }
 
-        .font-b{
-            font-family:'Courier New', Courier, monospace;
-            font-size:15px;
+        /* --- [BARU] Gaya untuk Ikon di Kanan Header --- */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Jarak antar ikon */
         }
 
-
-        /* --- Text Input Fields --- */
-        input[type="text"] {
-            background-color: #333333; /* Dark gray input background */
-            border: 1px solid #978f8f; /* Subtle border */
-            color: #e0e0e0;           /* Light text color for typing */
-            padding: 10px;
-            border-radius: 4px;
-            width: 50%;              /* Make input fill the remaining space */
-            box-sizing: border-box;   /* Ensures padding doesn't affect the width */
+        .icon-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s;
         }
 
-        /* --- Special styles for the number range row --- */
-        .range-row span {
-            margin: 0 10px; /* Space around the word "until" */
+        .icon-button:hover {
+            background-color: var(--google-icon-hover-bg);
         }
 
-        .range-row input {
-            width: 100px; /* Give the smaller number inputs a fixed width */
+        .icon-button svg {
+            fill: var(--google-text);
+            width: 24px;
+            height: 24px;
         }
 
-        .second-subclass{
-            display:flex;
-            /* margin-top:50px; */
-            padding:30px 30px;
-            font-size:18px;
+        .profile-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #8d17c0; /* Contoh warna background profil */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* --- Akhir Bagian Baru --- */
+        
+        /* --- Kontainer Utama --- */
+        .main-container {
+            padding: 0 45px;
+            max-width: 1100px;
         }
 
-        /* --- Main Container --- */
-.custom-select {
-  position: relative; /* This is crucial for positioning the options */
-  width: 250px;
-  font-family: sans-serif;
-  color: #e0e0e0;
-}
+        h1 {
+            color: #d93025;
+            font-size: 20px;
+            font-weight: normal;
+            margin: 25px 0;
+        }
 
-/* --- The Trigger Button (the visible part) --- */
-.select-trigger {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 15px;
-  background-color: #202124; /* Dark background */
-  border: 1px solid #5f6368; /* Default border */
-  border-radius: 4px;
-  cursor: pointer;
-  transition: border-color 0.2s;
-}
+        hr {
+            border: 0;
+            border-top: 1px solid var(--google-separator);
+            margin: 0;
+        }
+        
+        /* --- Tata Letak Form Grid --- */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr 350px; 
+            gap: 16px 20px;
+            align-items: center;
+            padding: 20px 0;
+        }
 
-/* --- Main Container --- */
-.custom-select {
-  position: relative; /* Still needed for positioning the options list */
-  width: 800px;
-  font-family: sans-serif;
-  color: #e0e0e0;
-}
+        .section-title {
+            grid-column: 1 / -1;
+            font-size: 16px;
+            margin: 10px 0;
+        }
 
-/* --- The Trigger Button (the <summary> tag) --- */
-.select-trigger {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 15px;
-  background-color: #202124;
-  border: 1px solid #5f6368;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: border-color 0.2s;
-  /* Remove the default arrow/marker from the summary element */
-  list-style: none; 
-}
+        .form-label {
+            text-align: left;
+            font-size: 13px;
+        }
 
-/* Remove the default marker in Chrome/Safari */
-.select-trigger::-webkit-details-marker {
-  display: none;
-}
+        .form-input {
+            width: 100%;
+        }
 
-/* Style the trigger when the <details> element is open */
-.custom-select[open] > .select-trigger {
-  border-color: #8ab4f8; /* Blue border when open */
-  border-radius: 4px 4px 0 0;
-}
+        .form-input-range {
+            width: 40%;
+        }
 
-/* --- The Custom Dropdown Arrow --- */
-.arrow {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #e0e0e0;
-  transition: transform 0.2s ease; /* Animate the arrow rotation */
-}
+        .form-description {
+            color: var(--google-text-secondary);
+            font-size: 12px;
+        }
+        
+        /* --- Gaya untuk Elemen Input --- */
+        input[type="text"], select {
+            background-color: var(--google-input-bg);
+            color: var(--google-text);
+            border: 1px solid var(--google-border);
+            border-radius: 1px;
+            padding: 6px 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-/* Rotate the arrow when the dropdown is open */
-.custom-select[open] .arrow {
-  transform: rotate(180deg);
-}
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--google-border-focus);
+        }
+        
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .range-container input {
+            width: 240px;
+        }
+        
+        /* --- Tombol Aksi --- */
+        .button-container {
+            grid-column: 2 / 3;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 10px;
+        }
 
-/* --- The Options List --- */
-.options {
-  /* Position it absolutely to overlay other content */
-  position: absolute;
-  top: 100%; /* Position it right below the trigger */
-  left: 0;
-  right: 0;
-  background-color: #202124;
-  border: 1px solid #5f6368;
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  z-index: 10;
-  max-height: 1000px;
-  overflow-y: auto;
-}
+        .adv-button {
+            background-color: var(--google-blue);
+            color: var(--google-button-text);
+            border: 1px solid transparent;
+            border-radius: 2px;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--google-footer-bg);
+            border-top: 1px solid var(--google-separator);
+            padding: 15px 45px;
+            font-size: 13px;
+            color: var(--google-text-secondary);
+            position: fixed; /* Diubah menjadi fixed agar selalu di bawah */
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            margin-top: 10px;
+        }
+        .footer-links a {
+            color: var(--google-text-secondary);
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
 
-/* --- Individual Options --- */
-.option {
-  padding: 12px 15px;
-  cursor: pointer;
-}
-
-.option:hover {
-  background-color: #3c4043;
-}
-
-.submit-button {
-  background-color: rgb(14, 9, 9);
-  border: none;
-  color: #008CBA;;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
+        .second-container {
+            padding: 0 45px;
+            max-width: 1100px;
+        }
