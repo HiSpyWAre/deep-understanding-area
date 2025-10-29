@@ -1,210 +1,203 @@
- :root {
-            --google-bg: #0b0b0b;
-            --google-text: hsl(216, 15%, 94%);
-            --google-text-secondary: #bdc1c6;
-            --google-input-bg: #202124;
-            --google-border: #5f6368;
-            --google-border-focus: #8ab4f8;
-            --google-blue: #8ab4f8;
-            --google-button-text: #202124;
-            --google-footer-bg: #171717;
-            --google-separator: #3c4043;
-            --google-icon-hover-bg: rgba(232, 234, 237, 0.08);
-        }
+:root {
+    --google-bg: #0b0b0b;
+    --google-text: hsl(216, 15%, 94%);
+    --google-text-secondary: #bdc1c6;
+    --google-input-bg: #202124;
+    --google-border: #5f6368;
+    --google-border-focus: #8ab4f8;
+    --google-blue: #8ab4f8;
+    --google-button-text: #202124;
+    --google-footer-bg: #171717;
+    --google-separator: #3c4043;
+    --google-icon-hover-bg: rgba(232, 234, 237, 0.08);
+}
 
-        /* --- Reset & Gaya Dasar --- */
-        body {
-            background-color: var(--google-bg);
-            color: var(--google-text);
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            margin: 0;
-            padding: 0;
-            /* Menambahkan ruang di bawah agar footer tidak menimpa konten */
-            padding-bottom: 100px; 
-        }
-        
-        /* --- Header --- */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        .header-logo {
-            color: #f2ecec;
-            font-size: 22px;
-            font-weight: normal;
-            text-decoration: none;
-            padding-left: 10px;
-        }
+/* --- Reset & Gaya Dasar --- */
+body {
+    background-color: var(--google-bg);
+    color: var(--google-text);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px; 
+}
 
-        /* --- [BARU] Gaya untuk Ikon di Kanan Header --- */
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 8px; /* Jarak antar ikon */
-        }
+/* --- Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.header-logo {
+    color: #f2ecec;
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: none;
+    padding-left: 10px;
+}
 
-        .icon-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
+/* --- Ikon di Kanan Header --- */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antar ikon */
+}
 
-        .icon-button:hover {
-            background-color: var(--google-icon-hover-bg);
-        }
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
 
-        .icon-button svg {
-            fill: var(--google-text);
-            width: 24px;
-            height: 24px;
-        }
+.icon-button:hover {
+    background-color: var(--google-icon-hover-bg);
+}
 
-        .profile-avatar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: #8d17c0; /* Contoh warna background profil */
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        /* --- Akhir Bagian Baru --- */
-        
-        /* --- Kontainer Utama --- */
-        .main-container {
-            padding: 0 45px;
-            max-width: 1100px;
-        }
+.icon-button svg {
+    fill: var(--google-text);
+    width: 24px;
+    height: 24px;
+}
 
-        h1 {
-            color: #d93025;
-            font-size: 20px;
-            font-weight: normal;
-            margin: 25px 0;
-        }
+.profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #8d17c0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-        hr {
-            border: 0;
-            border-top: 1px solid var(--google-separator);
-            margin: 0;
-        }
-        
-        /* --- Tata Letak Form Grid --- */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 200px 1fr 350px; 
-            gap: 16px 20px;
-            align-items: center;
-            padding: 20px 0;
-        }
+/* --- Kontainer Utama --- */
+.main-container {
+    padding: 0 45px;
+    max-width: 1100px;
+}
 
-        .section-title {
-            grid-column: 1 / -1;
-            font-size: 16px;
-            margin: 10px 0;
-        }
+h1 {
+    color: #d93025;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 25px 0;
+}
 
-        .form-label {
-            text-align: left;
-            font-size: 13px;
-        }
+hr {
+    border: 0;
+    border-top: 1px solid var(--google-separator);
+    margin: 0;
+}
 
-        .form-input {
-            width: 100%;
-        }
+/* --- Tata Letak Form Grid --- */
+.form-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 350px; 
+    gap: 16px 20px;
+    align-items: center;
+    padding: 20px 0;
+}
 
-        .form-input-range {
-            width: 40%;
-        }
+.section-title {
+    grid-column: 1 / -1; /* Merentang penuh 3 kolom */
+    font-size: 16px;
+    margin: 10px 0;
+}
 
-        .form-description {
-            color: var(--google-text-secondary);
-            font-size: 12px;
-        }
-        
-        /* --- Gaya untuk Elemen Input --- */
-        input[type="text"], select {
-            background-color: var(--google-input-bg);
-            color: var(--google-text);
-            border: 1px solid var(--google-border);
-            border-radius: 1px;
-            padding: 6px 8px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+.form-label {
+    text-align: left;
+    font-size: 13px;
+}
 
-        input[type="text"]:focus, select:focus {
-            outline: none;
-            border-color: var(--google-border-focus);
-        }
-        
-        .range-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .range-container input {
-            width: 240px;
-        }
-        
-        /* --- Tombol Aksi --- */
-        .button-container {
-            grid-column: 2 / 3;
-            display: flex;
-            justify-content: flex-end;
-            padding-top: 10px;
-        }
+.form-input {
+    width: 100%;
+}
 
-        .adv-button {
-            background-color: var(--google-blue);
-            color: var(--google-button-text);
-            border: 1px solid transparent;
-            border-radius: 2px;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 8px 16px;
-            cursor: pointer;
-        }
-        
-        /* --- Footer --- */
-        .footer {
-            background-color: var(--google-footer-bg);
-            border-top: 1px solid var(--google-separator);
-            padding: 15px 45px;
-            font-size: 13px;
-            color: var(--google-text-secondary);
-            position: fixed; /* Diubah menjadi fixed agar selalu di bawah */
-            bottom: 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .footer-links {
-            display: flex;
-            gap: 25px;
-            margin-top: 10px;
-        }
-        .footer-links a {
-            color: var(--google-text-secondary);
-            text-decoration: none;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
+.form-description {
+    color: var(--google-text-secondary);
+    font-size: 12px;
+}
 
-        .second-container {
-            padding: 0 45px;
-            max-width: 1100px;
-        }
+/* --- Gaya untuk Elemen Input --- */
+input[type="text"],
+select {
+    background-color: var(--google-input-bg);
+    color: var(--google-text);
+    border: 1px solid var(--google-border);
+    border-radius: 1px;
+    padding: 6px 8px;
+    width: 100%; /* <- KINI BERLAKU UNTUK INPUT DAN SELECT */
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, 
+select:focus {
+    outline: none;
+    border-color: var(--google-border-focus);
+}
+
+/* --- AKHIR PERUBAHAN CSS --- */
+.range-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.range-container input {
+    /* Lebar spesifik untuk input range agar tidak terlalu panjang */
+    width: 240px; 
+}
+
+/* --- Tombol Aksi --- */
+.button-container {
+    grid-column: 2 / 3; /* Sejajarkan dengan kolom input */
+    display: flex;
+    justify-content: flex-end; /* Pindahkan tombol ke kanan */
+    padding-top: 10px;
+}
+
+.adv-button {
+    background-color: var(--google-blue);
+    color: var(--google-button-text);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--google-footer-bg);
+    border-top: 1px solid var(--google-separator);
+    padding: 15px 45px;
+    font-size: 13px;
+    color: var(--google-text-secondary);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.footer-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+}
+.footer-links a {
+    color: var(--google-text-secondary);
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
