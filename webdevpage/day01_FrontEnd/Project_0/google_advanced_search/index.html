@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
     <title>Advance Search Project 0</title>
 </head>
 <body>
@@ -21,7 +20,6 @@
                 <span>N</span>
             </div>
         </div>
-        
     </header>
 
     <div class="main-container">
@@ -31,7 +29,7 @@
         <form action="https://www.google.com/search" method="GET">
             <div class="form-grid">
 
-                <div class="section-title"></div>
+                <div class="section-title">Search pages with...</div>
                 
                 <div class="form-label">
                     <label for="as_q">Find pages with:</label>
@@ -40,7 +38,7 @@
                     <input type="text" id="as_q" name="as_q">
                 </div>
                 <div class="form-description">
-                   Type the important words: <span style="font-family: monospace;">tri-colour rat terrier </span>
+                    Type the important words: <span style="font-family: monospace;">tri-colour rat terrier </span>
                 </div>
 
                 <div class="form-label">
@@ -60,38 +58,145 @@
                     <input type="text" id="as_oq" name="as_oq">
                 </div>
                 <div class="form-description">
-                   Type OR between all the words you want:<span style="font-family: monospace;">"miniature OR standard"</span>
+                    Type OR between all the words you want:<span style="font-family: monospace;">"miniature OR standard"</span>
                 </div>
 
                 <div class="form-label">
-                    <label for="as_eq">none of these wprds: </label>
+                    <label for="as_eq">none of these words: </label>
                 </div>
                 <div class="form-input">
-                    <input type="text" id="as_eq" name="as eq">
+                    <input type="text" id="as_eq" name="as_eq">
                 </div>
                 <div class="form-description">
-                   Put a minus sign just before words that you don't want:<span style="font-family: monospace;">-rodent, -"Jack Russell"   </span>
+                    Put a minus sign just before words that you don't want:<span style="font-family: monospace;">-rodent, -"Jack Russell" </span>
                 </div>
 
                 <div class="form-label">
-                    <label for="as_nlo">numbers ranging form: </label>
+                    <label for="as_nlo">numbers ranging from: </label>
                 </div>
                 <div class="form-input range-container">
                     <input type="text" id="as_nlo" name="as_nlo">
-                      <span>until</span>
+                        <span>until</span>
                     <input type="text" id="as_nhi" name="as_nhi">
                 </div>
-
                 <div class="form-description">
                     Put two full stops between the numbers and add a unit of measurement:<span style="font-family: monospace;"></span>
                 </div>
-            
                 
-            <div class = "second-container">
-                <hr >
-                <div class ="container-desc">
-                    Then narrow your result by...
+                <div class="section-title" style="border-top: 1px solid var(--google-separator); padding-top: 20px; margin-top: 10px;">
+                    Then narrow your results by...
                 </div>
 
+                <div class="form-label">
+                    <label for="lr">language:</label>
+                </div>
+                <div class="form-input">
+                    <select id="lr" name="lr">
+                        <option value="">any language</option>
+                        <option value="lang_af">Afrikaans</option>
+                        <option value="lang_ar">Arabic</option>
+                        <option value="lang_hy">Armenian</option>
+                        <option value="lang_nl">Dutch</option>
+                        <option value="lang_be">Belarusian</option>
+                    </select>
+                </div>
+                <div class="form-description">
+                    Search for pages in your chosen language.
+                </div>
 
-            </div>
+                <div class="form-label">
+                    <label for="cr">area:</label>
+                </div>
+                <div class="form-input">
+                    <select id="cr" name="cr">
+                        <option value="">Any Region</option>
+                        <option value="countryAF">Afghanistan</option>
+                        <option value="countryAL">Albania</option>
+                        <option value="countryDZ">Algeria</option>
+                        <option value="countryID">Indonesia</option>
+                    </select>
+                </div>
+                <div class="form-description">
+                    Find pages published in a specific area.
+                </div>
+
+                <div class="form-label">
+                    <label for="as_qdr">last updated:</label>
+                </div>
+                <div class="form-input">
+                    <select id="as_qdr" name="as_qdr">
+                        <option value="all">anytime</option>
+                        <option value="d">past 24 hours</option>
+                        <option value="w">past week</option>
+                        <option value="m">past month</option>
+                        <option value="y">past year</option>
+                    </select>
+                </div>
+                <div class="form-description">
+                    Search for pages updated within a time period you specify.
+                </div>
+
+                <div class="form-label">
+                    <label for="as_sitesearch">site or domain:</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="as_sitesearch" name="as_sitesearch">
+                </div>
+                <div class="form-description">
+                    Search a single site (for example: <span style="font-family: monospace;">wikipedia.org</span>) or limit your results to specific domains such as: <span style="font-family: monospace;">.edu, .org,</span> or <span style="font-family: monospace;">.gov</span>
+                </div>
+
+                <div class="form-label">
+                    <label for="as_occt">terms that appear:</label>
+                </div>
+                <div class="form-input">
+                    <select id="as_occt" name="as_occt">
+                        <option value="any">anywhere on the page</option>
+                        <option value="title">in the title of the page</option>
+                        <option value="body">in the text of the page</option>
+                        <option value="url">in the URL of the page</option>
+                        <option value="links">in links to the page</option>
+                    </select>
+                </div>
+                <div class="form-description">
+                    Search for terms across pages, page titles, web addresses, or links to the pages you're looking for.
+                </div>
+
+                <div class="form-label">
+                    <label for="as_filetype">file type:</label>
+                </div>
+                <div class="form-input">
+                    <select id="as_filetype" name="as_filetype">
+                        <option value="">any format</option>
+                        <option value="pdf">Adobe Acrobat PDF (.pdf)</option>
+                        <option value="ps">Adobe Postscript (.ps)</option>
+                        <option value="dwf">Autodesk DWF (.dwf)</option>
+                        <option value="kml">Google Earth KML (.kml)</option>
+                    </select>
+                </div>
+                <div class="form-description">
+                    Search for pages in the format you want.
+                </div>
+
+                <div class="form-label">
+                    <label for="as_rights">usage rights:</label>
+                </div>
+                <div class="form-input">
+                    <select id="as_rights" name="as_rights">
+                        <option value="">unfiltered by license</option>
+                        <option value="cc_publicdomain">free to use or share</option>
+                        <option value="cc_attribute">free to use or share, even commercially</option>
+                        <option value="cc_sharealike">free to use or share, with modifications</option>
+                    </select>
+                </div>
+                <div class="form-description">
+                    Find a page that you are free to use.
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="adv-button">Advanced Search</button>
+                </div>
+
+            </div> </form> </div> </body>
+</html>
+
