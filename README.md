@@ -119,7 +119,7 @@ Each project introduces **new concepts** while reinforcing previous lessons, so 
 - main page✅, advance search page, and image search page✅
 - the user should be able to type in a query, click “Google Search”, and be taken to the Google search results for that page.
 
-1. 
+**1. Wikipedia main page** 
 
 ## 🛠️ How to Use
 1. Clone the repo:  
